@@ -7,26 +7,28 @@ public class App
 {
 
     private final String message = "Hello World to Infoblox!";
-   
-    private final Integer sum()
-    {
-         int a =10, b=20;
-         int c;
-         c = a+b;
+    public static Integer add(Integer a, Integer b) {
+        if (a == null) {
+            return null;
+        }
+        if (b == null) {
+            return null;
+        }
+        return a + b;
     }
 
     public App() {}
 
     public static void main(String[] args) {
+        int a = 10;
+        int b=20;
         System.out.println(new App().getMessage());
-        System.out.println(new App().getSum());
+        System.out.println(new App().add(a,b));
     }
 
     private final String getMessage() {
         return message;
     }
-    private final Integer getSum() {
-        return sum();
-    }
+  
 
 }
